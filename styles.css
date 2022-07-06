@@ -1,6 +1,13 @@
 body {
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
+}
+label {
+  font-size: 1.25em;
+}
+input {
+  margin: 1em;
 }
 
 .container {
@@ -9,9 +16,7 @@ body {
   flex-direction: column;
   padding: 5em;
 }
-label {
-  font-size: 1.25em;
-}
-input {
-  margin: 1em;
+.gradient-block {
+  width: 1200px;
+  height: 400px;
 }

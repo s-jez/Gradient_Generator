@@ -8,9 +8,24 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <input type="color" id="color-1" class="color" value="#eeeeee" />
-    <input type="color" id="color-2" class="color" value="#eeeeee" />
-    <div class="slider-content"></div>
+    <div class="container">
+      <h1>Gradient Generator</h1>
+      <label for="color-1">Select first color:</label>
+      <input type="color" id="color-1" class="color" value="#eeeeee" />
+      <label for="color-2">Select second color:</label>
+      <input type="color" id="color-2" class="color" value="#eeeeee" />
+      <label for="degress">Input degree:</label>
+      <input
+        type="number"
+        min="1"
+        value="120"
+        max="360"
+        id="degrees"
+        class="degree"
+      />
+      <div class="slider-content"></div>
+      <button class="btn-copy">Copy Gradient to Clipboard</button>
+    </div>
     <script src="./app.js"></script>
   </body>
 </html>

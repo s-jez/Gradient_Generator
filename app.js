@@ -1,20 +1,14 @@
 const COLOR = document.querySelectorAll(".color");
 
-const colorToHex = (c) => {
-  const hex = c.toString(16);
-  return hex.length == 1 ? "0" + hex : hex;
+const changeBackgroundColor = (colorOne, colorTwo) => {
+  document.body.style.backgroundImage =
+    "linear-gradient(to right, " + colorOne + ", " + colorTwo + ")";
 };
-const rgbToHex = (r, g, b) => {
-  return "#" + colorToHex(r) + colorToHex(g) + colorToHex(b);
-};
-
-const printColor = (ev) => {
-  const color = ev.target.value;
-  const r = parseInt(color.substr(1, 2), 16);
-  const g = parseInt(color.substr(3, 2), 16);
-  const b = parseInt(color.substr(5, 2), 16);
-  console.log(rgbToHex(r, g, b));
+const generateGradient = () => {
+  let colorOne = document.getElementById("color-1").value;
+  let colorTwo = document.getElementById("color-2").value;
+  changeBackgroundColor(colorOne, colorTwo);
 };
 COLOR.forEach((item) => {
-  item.addEventListener("change", printColor);
+  item.addEventListener("change", generateGradient);
 });
